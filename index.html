@@ -8,14 +8,28 @@
 </head>
 
 <style>
+    @keyframes animation {
+        0% {opacity: 0;}
+        100% {opacity: 1;}
+    }
+
     img{display: none;}
+    #id1:checked ~ #img1,
+    #id2:checked ~ #img2,
+    #id3:checked ~ #img3,
+    #id4:checked ~ #img4{
+        display: block;
+        animation-name: animation;
+        animation-duration: 1.5s;
+    }
+
 </style>
 
 <body>
-    <input type="radio" id="switch1">
-    <input type="radio" id="switch2">
-    <input type="radio" id="switch3">
-    <input type="radio" id="switch4">
+    <input type="radio" name="name" id="id1">
+    <input type="radio" name="name" id="id2">
+    <input type="radio" name="name" id="id3">
+    <input type="radio" name="name" id="id4">
 
     <img src="img1.jpg" id="img1" alt="">
     <img src="img2.jpeg" id="img2" alt="">
