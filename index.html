@@ -1,40 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-
-<style>
-    @keyframes animation {
-        0% {opacity: 0;}
-        100% {opacity: 1;}
-    }
-
-    img{display: none;}
-    #id1:checked ~ #img1,
-    #id2:checked ~ #img2,
-    #id3:checked ~ #img3,
-    #id4:checked ~ #img4{
-        display: block;
-        animation-name: animation;
-        animation-duration: 1.5s;
-    }
-
-</style>
-
 <body>
-    <input type="radio" name="name" id="id1">
-    <input type="radio" name="name" id="id2">
-    <input type="radio" name="name" id="id3">
-    <input type="radio" name="name" id="id4">
+    <div id="diagram"> </div>
+    <script>
+        let names = ["Москва", "Рим", "Париж"];
+        let population = [8000000, 50000, 7000000];
 
-    <img src="img1.jpg" id="img1" alt="">
-    <img src="img2.jpeg" id="img2" alt="">
-    <img src="img3.jpg" id="img3" alt="">
-    <img src="img4.jpeg" id="img4" alt="">
+        let diagram = document.getElementById('diagram');
+
+        let elem2 = document.createElement('div');
+        elem2.innerText = names[1];
+        diagram.append(elem2);
+    </script>
 </body>
-
 </html>
